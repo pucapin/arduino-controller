@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="arduino-uno.png">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Stack+Sans+Text:wght@200..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="hello"></h1>
+
+    <div class="dashboard">
+        <div class="container">
+            <div class="controllers">
+                <p>Please select how many times you want all the lights to blink</p>
+                <div class="num-contain">
+                    <button class="number-select" id="minus">-</button>
+                    <p id="counter">0</p>
+                    <button class="number-select" id="add">+</button>
+                    <button class="orange-btn" id="send-blink">Send!</button>
+                </div>
+                <p class="current-states">Current LED states</p>
+                <div class="state-container">
+                    <p class="state">Red LED: </p> <button id="red-state">OFF</button>
+                </div>
+                <div class="state-container">
+                    <p class="state">Yellow LED: </p> <button id="yellow-state">OFF</button>
+                </div>
+                <div class="state-container">
+                    <p class="state">Green LED: </p> <button id="green-state">OFF</button>
+                </div>
+                <button class="button" id="party-mode">
+                <div class="button-outer">
+                    <div class="button-inner">
+                        <span>Party Mode</span>
+                    </div>
+                </div>
+                </button>
+            </div>
+        </div>
+
+
+
+        <div class="right-content">
+            <div class="side-container">
+                <img src="arduino-uno.png" class="cursor-img" alt="cursor">
+                <p>Check out the demo video here:</p>
+                <button id="play-btn">Play</button>
+                <p id="kaomoji">(ദ്ദി˙ ᴗ ˙ )</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div id="window">
+        <div id="window-header">
+            <div class="dotR"></div>
+            <div class="dotY"></div>
+            <div class="dotG"></div>
+        </div>
+        <img src="pic.png" alt="">
+    </div>
+
+    <div id="terminal">
+        <div id="window-header">
+            <div class="dotR"></div>
+            <div class="dotY"></div>
+            <div class="dotG"></div>
+        </div>
+        <p>> hii! enter a color between green, yellow or red :3</p>
+        <input type="text" id="color-input" placeholder=">">
+        <p id="color-selected">> color selected: </p>
+    </div>
+    
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
